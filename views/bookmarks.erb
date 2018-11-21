@@ -1,3 +1,6 @@
-<br>
-
-<%= @bookmarks %>
+<p>Your list of bookmarks </p>
+<ol>
+  <% @list.contents.each do |bookmark| %>
+  <li><%= bookmark %></li>
+  <% end %>
+</ol>

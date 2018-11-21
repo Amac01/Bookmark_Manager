@@ -1,12 +1,7 @@
 
 class Bookmarks
-    attr_reader :bookmarks
+    attr_reader :contents
   def initialize
-    @bookmarks = ['http://makers.tech', 'http://www.destroyallsoftware.com', 'http://www.google.com']
+    @contents = ['http://makers.tech', 'http://www.destroyallsoftware.com', 'http://www.google.com']
   end
-
-  def all
-    @bookmarks.join(', ')
-  end
-
 end
