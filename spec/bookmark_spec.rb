@@ -1,8 +1,10 @@
 require "bookmark"
-require "pg"
 
 describe Bookmarks do
-  it "returns makers.tech when see_list is called" do
+  before(:each) do
+  add_bookmarks
+  end
+  it "returns makers academy when see_list is called" do
     bookmarks = Bookmarks.see_list
     expect(bookmarks[0]['url']).to eq "http://www.makersacademy.com"
   end
