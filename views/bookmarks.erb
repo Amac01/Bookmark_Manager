@@ -1,6 +1,6 @@
 <p>Your list of bookmarks </p>
 <ol>
-  <% @list.contents.each do |bookmark| %>
-  <li><%= bookmark %></li>
+  <% @list.each do |bookmark| %>
+  <li><%= bookmark['url'] %></li>
   <% end %>
 </ol>

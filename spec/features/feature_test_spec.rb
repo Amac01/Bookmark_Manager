@@ -10,6 +10,6 @@ feature 'a list of bookmarks' do
   end
   scenario 'by visiting bookmarks users can access a list of bookmarks' do
     visit '/bookmarks'
-    expect(page).to have_content("http://makers.tech")
+    expect(page).to have_content("http://www.makersacademy.com")
   end
 end

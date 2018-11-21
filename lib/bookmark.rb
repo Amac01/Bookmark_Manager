@@ -1,7 +1,7 @@
-
+require "pg"
 class Bookmarks
-    attr_reader :contents
-  def initialize
-    @contents = ['http://makers.tech', 'http://www.destroyallsoftware.com', 'http://www.google.com']
+  def self.see_list
+    connection = PG.connect :dbname => 'bookmark_manager'
+    connection.exec "SELECT * FROM bookmarks"
   end
 end

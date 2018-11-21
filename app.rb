@@ -1,7 +1,7 @@
 
 require 'sinatra/base'
 require './lib/bookmark.rb'
-
+require 'pg'
 
 
 
@@ -11,7 +11,7 @@ class BookmarkManager < Sinatra::Base
 
 
   get '/bookmarks' do
-    @list = Bookmarks.new
+    @list = Bookmarks.see_list
 
     erb :bookmarks
   end

@@ -1,9 +1,17 @@
-require 'bookmark'
+require "bookmark"
+require "pg"
 
 describe Bookmarks do
-  let(:bookmarks) { Bookmarks.new }
-  it "list's the bookmarks on the /bookmark route" do
-    expect(bookmarks.contents).to eq ['http://makers.tech', 'http://www.destroyallsoftware.com', 'http://www.google.com']
+  it "returns makers.tech when see_list is called" do
+    bookmarks = Bookmarks.see_list
+    expect(bookmarks[0]['url']).to eq "http://www.makersacademy.com"
   end
-
+  it "returns makers.tech when see_list is called" do
+    bookmarks = Bookmarks.see_list
+    expect(bookmarks[1]['url']).to eq "http://www.google.com"
+  end
+  it "returns makers.tech when see_list is called" do
+    bookmarks = Bookmarks.see_list
+    expect(bookmarks[2]['url']).to eq "http://www.destroyallsoftware.com"
+  end
 end
