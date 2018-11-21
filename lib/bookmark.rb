@@ -1,11 +1,11 @@
 
 class Bookmarks
-
+    attr_reader :bookmarks
   def initialize
-    @bookmarks = ['google.com']
+    @bookmarks = ['http://makers.tech', 'http://www.destroyallsoftware.com', 'http://www.google.com']
   end
 
-  def print
+  def all
     @bookmarks.join(', ')
   end
 

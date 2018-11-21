@@ -4,13 +4,14 @@ require './lib/bookmark.rb'
 
 
 
+
 class BookmarkManager < Sinatra::Base
 
   enable :sessions
 
 
   get '/bookmarks' do
-    @bookmarks = Bookmarks.new.print
+    @bookmarks = Bookmarks.new.all
 
     erb :bookmarks
   end
