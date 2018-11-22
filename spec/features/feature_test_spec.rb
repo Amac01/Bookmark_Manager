@@ -15,4 +15,5 @@ feature 'a list of bookmarks' do
     visit '/bookmarks'
     expect(page).to have_link('Makers', href: "http://www.makersacademy.com")
   end
+
 end

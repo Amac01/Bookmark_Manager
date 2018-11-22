@@ -22,6 +22,11 @@ post '/bookmarks/create' do
   redirect('/bookmarks')
 end
 
+post '/bookmarks/delete' do
+  Bookmarks.delete(params[:delete] )
+  redirect('/bookmarks')
+end
+
 
 
 

@@ -2,9 +2,13 @@
 <ol>
   <% @list.each do |bookmark| %>
   <li>
-    <a href='<%= bookmark['url'] %>' target='blank'>
-    <%= bookmark['title'] %>
+    <a href='<%= bookmark.url %>' target='blank'>
+    <%= bookmark.title %>
   </a>
+
+  <form action='bookmarks/delete' method='post'>
+    <button type='submit' name='delete' id='delete <%= bookmark.title %>' value='<%= bookmark.id %>'> Delete </button>
+  </form>
 
   </li>
   <% end %>
