@@ -8,7 +8,7 @@ end
 
 def add_bookmarks
   connection = PG.connect dbname: 'bookmark_manager_test'
-  connection.exec "INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com')"
-  connection.exec "INSERT INTO bookmarks (url) VALUES ('http://www.google.com')"
-  connection.exec "INSERT INTO bookmarks (url) VALUES ('http://www.destroyallsoftware.com')"
+  connection.exec "INSERT INTO bookmarks (url, title) VALUES ('http://www.makersacademy.com', 'Makers')"
+  connection.exec "INSERT INTO bookmarks (url, title) VALUES ('http://www.google.com', 'Google')"
+  connection.exec "INSERT INTO bookmarks (url, title) VALUES ('http://www.destroyallsoftware.com', 'DAS')"
 end
